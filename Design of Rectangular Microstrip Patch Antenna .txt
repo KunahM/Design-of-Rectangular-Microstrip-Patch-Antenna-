@@ -1,0 +1,17 @@
+MATLAB PROGRAM FOR CALCULATING OF G12
+
+clc;
+clear all;
+w=38;
+l=29;
+lamda=30;
+k=(2*pi)/lamda;
+syms x;
+g=(((sin(((k*w)/2)*cos(x))/cos(x))^2)*(besselj(0,k*l*sin(x)))*sin(x)*sin(x));
+q=(1/120*pi*pi)*int(g,x,0,pi);
+q
+
+(Note:
+Type the following syntax in command window:
+double(q)
+now the value of q= G12)
